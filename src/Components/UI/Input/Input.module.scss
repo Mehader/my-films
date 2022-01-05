@@ -1,0 +1,24 @@
+@import "../../../variables";
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 5px 20px 5px 20px;
+  color: $text-c-white;
+  border: 1px solid transparent;
+  border-radius: $input-br;
+  background-color: $bg-c-input;
+  @media screen and (max-width: $tablet-small) {
+    height: 35px;
+  }
+}
+
+.inputNotValid {
+  width: 100%;
+  height: 40px;
+  padding: 5px 20px 5px 20px;
+  color: $text-c-white;
+  border: 1px solid red;
+  border-radius: $input-br;
+  background-color: $bg-c-input;
+}

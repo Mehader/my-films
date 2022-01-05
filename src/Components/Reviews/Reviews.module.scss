@@ -1,0 +1,58 @@
+@import "src/_variables.scss";
+
+.wrapper {
+  width: 100%;
+  padding: 40px 0 40px 0;
+  color: $text-c-white;
+}
+
+.title {
+  font-size: 3em;
+  margin-bottom: 40px;
+}
+
+.wrapper_reviews {
+  margin: 20px 0 20px 0;
+  padding: 20px;
+  background-color: $bg-c-black-light;
+  border-radius: $input-br;
+}
+
+.reviews_title {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.box_author {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.reviews_author {
+  margin-right: 20px;
+}
+
+.reviews_description {
+  line-height: 1.3rem;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.reviews_data {
+  font-size: 1.2rem;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.reviews_error {
+  height: 400px;
+  font-size: 1.2rem;
+  clor: $text-c-white;
+}

@@ -1,0 +1,43 @@
+@import "./variables";
+@import-normalize;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 10px;
+  font-weight: $medium;
+  font-family: "Montserrat", sans-serif;
+  background-color: $bg-c-black;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: $text-c-white;
+}
+
+li {
+  list-style: none;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f9f9fd;
+  &-thumb {
+    border-radius: 10px;
+    background-color: #460909;
+  }
+  &-track {
+    background-color: #36363a;
+  }
+}

@@ -1,0 +1,24 @@
+@import "src/_variables.scss";
+
+.favourites {
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4em;
+    list-style: decimal inside none;
+    padding-bottom: 10px;
+    & > a:hover {
+      color: $logo-c;
+      cursor: pointer;
+    }
+  }
+  &_btnBox {
+    & span {
+      margin-left: 20px;
+      &:hover {
+        color: $logo-c;
+        cursor: pointer;
+      }
+    }
+  }
+}

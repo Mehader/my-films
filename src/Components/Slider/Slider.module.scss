@@ -1,0 +1,41 @@
+@import "src/_variables.scss";
+
+.slider {
+  background-color: black;
+  margin: 100px 0 150px 0;
+  position: relative;
+  @media screen and (max-width: $phone) {
+    font-size: 1.1em;
+    margin: 140px 0 130px 0;
+  }
+}
+
+.slider_title {
+  font-weight: bold;
+  font-size: 3em;
+  text-transform: uppercase;
+  color: $text-c-white;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+.slider_mask {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.slider_arrowBox {
+  float: right;
+}
+
+.slider_arrow {
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
+  &__left {
+    margin-right: 20px;
+  }
+}

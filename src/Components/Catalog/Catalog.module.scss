@@ -1,0 +1,23 @@
+@import "src/_variables.scss";
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 30px;
+  @media screen and (max-width: $tablet-big) {
+    gap: 14px;
+    justify-content: center;
+    padding: 14px;
+  }
+}
+
+.title {
+  font-weight: bold;
+  font-size: 3em;
+  text-transform: uppercase;
+  color: $text-c-white;
+  margin-bottom: 40px;
+  display: inline-block;
+}

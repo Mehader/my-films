@@ -1,0 +1,25 @@
+@import "src/_variables.scss";
+
+.loaderTitle {
+  position: relative;
+  margin-bottom: 35px;
+  width: 40px;
+  height: 40px;
+  border: 7px solid red;
+  border-radius: 50%;
+  animation: loader 1s infinite linear;
+  &:before {
+    content: "";
+    transform: rotate(134deg);
+    top: -9px;
+    width: 12px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+  }
+  @keyframes loader {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

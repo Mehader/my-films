@@ -1,0 +1,28 @@
+@import "../../../variables";
+
+.btn {
+  width: 100%;
+  height: 40px;
+  font-weight: $bold;
+  color: $text-c-white;
+  text-transform: uppercase;
+  border: $br-weight solid $logo-c;
+  border-radius: $input-br;
+  background-color: transparent;
+  transition: 0.4s;
+  cursor: pointer;
+  &:hover {
+    background-color: $bg-c-hover;
+  }
+  @media screen and (max-width: $tablet-small) {
+    height: 35px;
+  }
+  @media screen and (max-width: $phone) {
+    height: 30px;
+    font-size: 1em;
+  }
+}
+
+.active {
+  background-color: $bg-c-hover;
+}

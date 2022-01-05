@@ -1,0 +1,15 @@
+@import "src/_variables.scss";
+
+.paginationBox {
+  margin: 50px auto;
+  display: flex;
+  max-width: 1000px;
+  & > li {
+    width: 100%;
+    list-style: none;
+    margin-right: 10px;
+  }
+  @media screen and (max-width: $phone) {
+    display: none;
+  }
+}
