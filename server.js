@@ -1,13 +1,23 @@
-const http = require("http");
-const path = require("path");
 const express = require("express");
+const favicon = require("express-favicon");
+const path = require("path");
+const port = process.env.PORT || 8080;
 
-let wss;
-let server;
+// здесь у нас происходит импорт пакетов и определяется порт нашего сервера
 const app = express();
-app.use(express.static(path.join(__dirname, "./../build")));
+app.use(favicon(__dirname + "/build/favicon.png"));
 
-server = new http.createServer(app);
+//здесь наше приложение отдаёт статику
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, "build")));
 
-server.on("error", (err) => console.log("Server error:", err));
-server.listen(process.env.PORT);
+//простой тест сервера
+app.get("/ping", function (req, res) {
+  return res.send("pong");
+});
+
+//обслуживание html
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+app.listen(port);
