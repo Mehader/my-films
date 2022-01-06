@@ -80,12 +80,16 @@
   opacity: 0;
   transform: translateX(-100px);
   transition: opacity 5s, transform 1.5s;
+  @media screen and (max-width: $tablet-small) {
+    width: 100%;
+  }
   & > table {
     max-width: 700px;
     font-size: 1.6em;
     color: $text-c-white;
     @media screen and (max-width: $phone) {
       font-size: 1.3em;
+      width: 100%;
     }
     & > tbody {
       & > tr {
