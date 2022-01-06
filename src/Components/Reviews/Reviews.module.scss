@@ -55,4 +55,7 @@
   height: 400px;
   font-size: 1.2rem;
   clor: $text-c-white;
+  @media screen and (max-width: $phone) {
+    height: 200px;
+  }
 }

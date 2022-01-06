@@ -74,7 +74,7 @@ const Form: React.FC = () => {
         <div className={styles.form_box}>
           <h3 className={styles.form_title}>Регистрация</h3>
           <Input
-            type="text"
+            type="email"
             placeholder="введите почту"
             value={valueEmail.text}
             handler={handlerTypeEmail}

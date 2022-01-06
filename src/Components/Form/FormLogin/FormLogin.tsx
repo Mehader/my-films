@@ -45,7 +45,7 @@ const FormLogin: React.FC = () => {
         <div className={styles.form_box}>
           <h3 className={styles.form_title}>Аккаунт</h3>
           <Input
-            type="text"
+            type="email"
             placeholder="введите почту"
             value={valueEmail}
             handler={handlerTypeEmail}

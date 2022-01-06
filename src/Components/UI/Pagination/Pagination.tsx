@@ -10,7 +10,7 @@ const Pagination: React.FC<IPagination> = ({
   pageActiveNum,
   titleCatalogRef,
 }) => {
-  const arrBtn: Array<boolean> = Array(totalPages && totalPages / 20).fill(
+  const arrBtn: Array<boolean> = Array(totalPages && totalPages / 20 / 4).fill(
     false
   );
 

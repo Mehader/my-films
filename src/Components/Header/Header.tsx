@@ -63,7 +63,6 @@ const Header: React.FC = () => {
                   typeCatalog === endPoint.pageFilm ? styles.active : ""
                 )}
                 onClick={() => {
-                  clearSearchValue();
                   dispatch(setTypeCatalog(endPoint.pageFilm));
                 }}
                 to={"/"}
@@ -79,7 +78,6 @@ const Header: React.FC = () => {
                   typeCatalog === endPoint.pageTvShow ? styles.active : ""
                 )}
                 onClick={() => {
-                  clearSearchValue();
                   dispatch(setTypeCatalog(endPoint.pageTvShow));
                 }}
                 to={"/"}

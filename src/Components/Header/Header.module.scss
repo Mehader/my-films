@@ -54,6 +54,7 @@
     font-weight: $bold;
   }
   @media screen and (max-width: $phone) {
+    width: 100%;
     font-size: 1.1em;
     padding: 0 45px 0 30px;
   }
@@ -84,7 +85,7 @@
     width: 100%;
     top: 55px;
     font-size: 1.1em;
-    padding: 0 15px 0 0;
+    padding: 0 20px 0 0;
   }
 }
 
