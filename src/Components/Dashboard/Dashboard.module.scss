@@ -4,6 +4,9 @@
   margin-top: 100px;
   height: 75vh;
   padding: 100px 0 100px 0;
+  @media screen and (max-width: $phone) {
+    margin-top: 60px;
+  }
   &_wrapper {
     display: flex;
     height: 300px;
@@ -27,6 +30,10 @@
   max-width: 50%;
   display: flex;
   align-items: center;
+  @media screen and (max-width: $phone) {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
   div {
     max-width: 600px;
   }
@@ -83,7 +90,7 @@
     max-width: 100%;
     height: 250px;
     font-size: 1em;
-    padding: 20px 0 20px 0;
+    padding: 20px 10px 20px 10px;
   }
 }
 
