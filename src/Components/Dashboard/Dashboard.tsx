@@ -1,15 +1,14 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import styles from "./Dashboard.module.scss";
-import Input from "../UI/Input/Input";
 import Button from "../UI/Button/Button";
 import { addFavorite, addUserLS } from "../../store/usersSlice";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import Favorite from "../Faforite/Favorite";
-import { getFavoriteLS } from "../../functionLS";
+import { getFavoriteLS, parseLS } from "../../functionLS";
 
 const Dashboard: React.FC = () => {
   const { favorites } = useAppSelector((state) => state.users);
-  const [valueInput, setValueInput] = useState("");
+  const [show, setShow] = useState(false);
   const dispatch = useAppDispatch();
 
   const liveAccount = () => {
@@ -17,9 +16,8 @@ const Dashboard: React.FC = () => {
     dispatch(addUserLS());
   };
 
-  const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
-    setValueInput(e.target.value);
-  };
+  const myLogin = localStorage.getItem("account");
+  const myPassword = " " + parseLS(myLogin ? myLogin : "").password;
 
   useEffect(() => {
     dispatch(addFavorite(getFavoriteLS()));
@@ -31,29 +29,20 @@ const Dashboard: React.FC = () => {
         <h2 className={styles.dashboard_title}>Аккаунт</h2>
         <div className={styles.dashboard_wrapper}>
           <div className={styles.personPanel}>
-            <div>
-              <div className={styles.personPanel_itemBox}>
-                <Input
-                  valid={true}
-                  value={valueInput}
-                  handler={handleInput}
-                  type="text"
-                  placeholder="новая почта"
-                />
-                <Button>изменить</Button>
+            <div className={styles.personData_box}>
+              <div>Ваш логин: {myLogin}</div>
+              <div>
+                Ваш пароль:
+                <span
+                  style={{ cursor: "pointer" }}
+                  onClick={() => setShow(!show)}
+                >
+                  {show ? myPassword : " показать"}
+                </span>
               </div>
-              <div className={styles.personPanel_itemBox}>
-                <Input
-                  valid={true}
-                  value={valueInput}
-                  handler={handleInput}
-                  type="password"
-                  placeholder="новый пароль"
-                />
-                <Button>изменить</Button>
-                <div className={styles.btnLiveBox}>
-                  <Button handler={liveAccount}>выйти из аккаунта</Button>
-                </div>
+
+              <div className={styles.btnExit}>
+                <Button handler={liveAccount}>выйти из аккаунта</Button>
               </div>
             </div>
           </div>

@@ -1,9 +1,8 @@
 @import "src/_variables.scss";
 
 .dashboard {
-  display: flex;
-  flex-direction: column;
   margin-top: 100px;
+  height: 75vh;
   padding: 100px 0 100px 0;
   &_wrapper {
     display: flex;
@@ -21,6 +20,8 @@
 .personPanel {
   width: 100%;
   max-width: 50%;
+  display: flex;
+  align-items: center;
   div {
     max-width: 600px;
   }
@@ -30,6 +31,19 @@
       margin-bottom: 10px;
     }
   }
+}
+
+.personData_box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 1.8em;
+  color: $text-c-white;
+  margin-bottom: 10px;
+}
+
+.btnExit {
+  width: 300px;
 }
 
 .favourites {

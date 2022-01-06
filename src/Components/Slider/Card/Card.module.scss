@@ -5,6 +5,10 @@
   height: auto;
   position: relative;
   margin-bottom: 20px;
+  @media screen and (max-width: $phone) {
+    width: 100%;
+    max-width: 340px;
+  }
 }
 
 .img_box {
@@ -45,6 +49,9 @@
   margin-bottom: 10px;
   border-radius: $input-br;
   transition: 0.4s;
+  @media screen and (max-width: $phone) {
+    height: 100%;
+  }
 }
 
 .card_rating {
