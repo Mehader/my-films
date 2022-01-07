@@ -4,7 +4,7 @@ import styles from "./Footer.module.scss";
 const Footer: React.FC = () => {
   return (
     <div className={styles.footer}>
-      Сайт разработан Mehad с использованием React technology
+      Сайт разработан Mehader с использованием React technology
     </div>
   );
 };
