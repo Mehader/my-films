@@ -33,7 +33,7 @@ const SearchResult: React.FC = () => {
           </ul>
         ) : (
           <div className={styles.search_nothingBox}>
-            <span>Не чего не найдено</span>
+            <span>Ничего не найдено</span>
           </div>
         )}
       </div>

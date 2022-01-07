@@ -46,8 +46,8 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
           </div>
+          <h3 className={styles.favourites_title}>Фильмы для просмотра</h3>
           <div className={styles.favourites}>
-            <h3 className={styles.favourites_title}>Фильмы для просмотра</h3>
             <ul>
               {favorites &&
                 favorites.map((el) => (
