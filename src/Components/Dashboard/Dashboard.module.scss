@@ -3,6 +3,7 @@
 .dashboard {
   margin-top: 100px;
   height: 75vh;
+  min-height: 700px;
   padding: 100px 0 100px 0;
   @media screen and (max-width: $phone) {
     margin-top: 60px;
