@@ -64,7 +64,7 @@
   width: 300px;
   @media screen and (max-width: $phone) {
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     width: 100%;
   }
 }
@@ -80,7 +80,6 @@
   background-color: $bg-c-black-light;
   &_box {
     width: 100%;
-    margin-bottom: 10px;
   }
   &_title {
     font-size: 2em;
