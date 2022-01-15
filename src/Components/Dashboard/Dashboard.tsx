@@ -46,14 +46,16 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
           </div>
-          <h3 className={styles.favourites_title}>Фильмы для просмотра</h3>
-          <div className={styles.favourites}>
-            <ul>
-              {favorites &&
-                favorites.map((el) => (
-                  <Favorite key={el.id} title={el.title} id={el.id} />
-                ))}
-            </ul>
+          <div>
+            <h3 className={styles.favourites_title}>Фильмы для просмотра</h3>
+            <div className={styles.favourites}>
+              <ul>
+                {favorites &&
+                  favorites.map((el) => (
+                    <Favorite key={el.id} title={el.title} id={el.id} />
+                  ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
