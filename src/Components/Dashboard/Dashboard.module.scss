@@ -78,6 +78,10 @@
   border-radius: $input-br;
   color: $text-c-white;
   background-color: $bg-c-black-light;
+  &_box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
   &_title {
     font-size: 2em;
     color: $text-c-white;

@@ -46,7 +46,7 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className={styles.favourites_box}>
             <h3 className={styles.favourites_title}>Фильмы для просмотра</h3>
             <div className={styles.favourites}>
               <ul>
