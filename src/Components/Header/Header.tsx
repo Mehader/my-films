@@ -5,7 +5,12 @@ import Input from "../UI/Input/Input";
 import { Link } from "react-router-dom";
 import BigLoader from "../Loaders/BigLoader/BigLoader";
 import cn from "classnames";
-import { useAppDispatch, useAppSelector, useDebounce, useScrollTop } from "../../hooks";
+import {
+  useAppDispatch,
+  useAppSelector,
+  useDebounce,
+  useScrollTop,
+} from "../../hooks";
 import { endPoint, getFilms } from "../../api";
 import { setTypeCatalog } from "../../store/catalogSlice";
 import {
@@ -27,9 +32,10 @@ const Header: React.FC = () => {
   }
 
   const clearSearchValue = () => {
-    useScrollTop();
     dispatch(addValueSearch(""));
   };
+
+  useScrollTop();
 
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch(addValueSearch(e.target.value));
