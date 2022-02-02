@@ -5,7 +5,7 @@ import Input from "../UI/Input/Input";
 import { Link } from "react-router-dom";
 import BigLoader from "../Loaders/BigLoader/BigLoader";
 import cn from "classnames";
-import { useAppDispatch, useAppSelector, useDebounce } from "../../hooks";
+import { useAppDispatch, useAppSelector, useDebounce, useScrollToTop } from "../../hooks";
 import { endPoint, getFilms } from "../../api";
 import { setTypeCatalog } from "../../store/catalogSlice";
 import {
@@ -27,6 +27,7 @@ const Header: React.FC = () => {
   }
 
   const clearSearchValue = () => {
+    useScrollToTop();
     dispatch(addValueSearch(""));
   };
 
